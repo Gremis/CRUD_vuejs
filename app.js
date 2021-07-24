@@ -16,5 +16,8 @@ const app = new Vue({
     editTask: function (index) {
       this.tasks[index].state = true;
     },
+    deleteTask: function (index) {
+      this.tasks.splice(index, 1);
+    },
   },
 });
