@@ -13,5 +13,8 @@ const app = new Vue({
       });
       this.newTask = "";
     },
+    editTask: function (index) {
+      this.tasks[index].state = true;
+    },
   },
 });
