@@ -20,4 +20,12 @@ const app = new Vue({
       this.tasks.splice(index, 1);
     },
   },
+  created: function () {
+    let dateDB = JSON.parse(localStorage.getItem("gym-vue"));
+    if (dateDB === null) {
+      this.tasks = [];
+    } else {
+      this.tasks = dateDB;
+    }
+  },
 });
