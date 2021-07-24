@@ -12,12 +12,15 @@ const app = new Vue({
         state: false,
       });
       this.newTask = "";
+      localStorage.setItem("gym-vue", JSON.stringify(this.tasks));
     },
     editTask: function (index) {
       this.tasks[index].state = true;
+      localStorage.setItem("gym-vue", JSON.stringify(this.tasks));
     },
     deleteTask: function (index) {
       this.tasks.splice(index, 1);
+      localStorage.setItem("gym-vue", JSON.stringify(this.tasks));
     },
   },
   created: function () {
